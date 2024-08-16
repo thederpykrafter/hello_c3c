@@ -3,12 +3,10 @@ import std::io;
 
 const HELLO = "Hello, world!";
 
-fn void hello()
-{
+fn void hello() {
 	io::printfn("%s", HELLO);
 }
 
-fn void main(String[] args)
-{
+fn void main(String[] args) {
 	hello();
 }

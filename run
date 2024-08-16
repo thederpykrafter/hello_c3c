@@ -2,7 +2,7 @@
 
 # c3c compile-run $(fd . src/ --type f) --output-dir build/
 # compile && get status && set status color
-c3c compile $(fd . src/ --type f) --output-dir build/ && status="\x1b[92m" || status="\x1b[91m"
+c3c compile $(fd . src/ --type f) --output-dir bin/ && status="\x1b[92m" || status="\x1b[91m"
 
 # print status color
 echo -en "$status"
@@ -14,4 +14,4 @@ printf %"$(($COLUMNS - 1))"s | tr " " "="
 echo -e "\x1b[m"
 
 # run executable
-./$(fd . build/ --type f)
+./$(fd . bin/ --type f)
